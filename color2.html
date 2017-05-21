@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head> <script src="Color2.js"></script></head>
+<body>
+	<!-- opdracht:
+	Verander niks aan de HTML, maar maak Color2.js, zo, dat het werkt!
+	Baseer Color2.js op Color1.js
+	-->
+
+<div style="display: inline-block;">
+  <span id="rood"> Rood </span>  <br> 
+  <span id="wit"> Wit </span>  <br> 
+  <span id="blauw"> Blauw </span> <br>
+</div>
+<div style="display: inline-block;">
+  <span id="donkerrood"> Rood </span>  <br> 
+  <span id="donkerwit"> Wit </span>  <br> 
+  <span id="donkerblauw"> Blauw </span> <br>
+</div>
+  
+<script type='text/javascript'>
+var r=new Color(255,0,0);
+document.getElementById("rood").style.backgroundColor=r.toString();
+var w=new Color(255,255,255);
+document.getElementById("wit").style.backgroundColor=w.toString();
+var b=new Color(0,0,255);
+document.getElementById("blauw").style.backgroundColor=b.toString();
+r.darkenColor();
+w.darkenColor();
+b.darkenColor();
+document.getElementById("donkerrood").style.backgroundColor=r.toString();
+document.getElementById("donkerwit").style.backgroundColor=w.toString();
+document.getElementById("donkerblauw").style.backgroundColor=b.toString();
+
+</script>
+
+</body>
+
+</html>
+
