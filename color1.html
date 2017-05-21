@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head> <script src="Color1.js"></script></head>
+<body>
+	<!-- opdracht:
+	Verander niks aan de HTML, maar maak Color1.js, zo dat het werkt!
+	-->
+
+  <span id="rood"> Rood </span> <br>
+  <span id="wit"> Wit </span>   <br>
+  <span id="blauw"> Blauw </span><br>
+  
+<script type='text/javascript'>
+"use strict";
+
+var r=new Color(255,0,0);
+document.getElementById("rood").style.backgroundColor=r.toString();
+
+var w=new Color(255,255,255);
+document.getElementById("wit").style.backgroundColor=w.toString();
+
+var b=new Color(0,0,255);
+document.getElementById("blauw").style.backgroundColor=b.toString();
+
+</script>
+
+</body>
+
+</html>
+
