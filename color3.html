@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head> <script src="Color3.js"></script></head>
+<body>
+	<!-- opdracht:
+	Verander niks aan de HTML, maar maak Color3.js, zo, dat het werkt!
+	Baseer het op de vorige versie!
+	-->
+
+<div style="display: inline-block;">
+  <span id="rood"> Rood </span>  <br> 
+  <span id="wit"> Wit </span>  <br> 
+  <span id="blauw"> Blauw </span> <br>
+</div>
+<div style="display: inline-block;">
+  <span id="drood"> Rood </span>  <br> 
+  <span id="dwit"> Wit </span>  <br> 
+  <span id="dblauw"> Blauw </span> <br>
+</div>
+<br>
+<span id="random"> Willekeurige kleur </span> <br>
+  
+<script type='text/javascript'>
+
+var r=new Color(255,0,0);
+document.getElementById("rood").style.backgroundColor=r.toString();
+var w=new Color(255,255,255);
+document.getElementById("wit").style.backgroundColor=w.toString();
+var b=new Color(0,0,255);
+document.getElementById("blauw").style.backgroundColor=b.toString();
+r.darkenColor();
+w.darkenColor();
+b.darkenColor();
+document.getElementById("drood").style.backgroundColor=r.toString();
+document.getElementById("dwit").style.backgroundColor=w.toString();
+document.getElementById("dblauw").style.backgroundColor=b.toString();
+
+// let op, voor de willekeurige kleur laat ik r,g,b weg!
+document.getElementById("random").style.backgroundColor=new Color();
+</script>
+
+</body>
+
+</html>
+
