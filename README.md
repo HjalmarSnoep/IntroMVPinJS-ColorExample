@@ -8,4 +8,5 @@ We is dan aan te raden, de opdrachten ZELF eerst te proberen, alvorens naar de o
 
 ## Filmpje
 Voor de eerste les is een filmpje gemaakt om uit te leggen wat ongeveer de bedoeling is.
+Deze vind je op: https://youtu.be/K6tAQjT8hbY
 
