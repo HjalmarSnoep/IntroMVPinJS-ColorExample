@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="ColorModel5.js"></script>
+ <script src="ColorView5.js"></script>
+</head>
+<body>
+	<!-- opdracht:
+	Verander niks aan de HTML of ColorView5.js, 
+	ColorView5.js heeft een extra method, update();
+	Hiermee kun je de kleur aanpassen. Dit ter info, je hoeft er niks mee.
+	
+	Wat jij wel moet: 
+	 - Baseer ColorModel5.js op ColorModel4.js
+	 - Maak een property callback, zet deze op null.
+	 - Maak een addCallback method bij aan roep zegt hij: "A subscriber was added to the model: "
+	 - Zorg dat deze methode "addCallback"
+	   een functie (die wordt gegeven als argument) 
+       bewaard in de property callback.
+	 - Zodra een van de functies (zoals darkenColor)
+	   iets veranderd aan het model en de view dus moet worden geupdate!
+	   roep je de bewaarde callback aan!
+	-->
+
+  
+<script type='text/javascript'>
+
+	var kleur_model=new ColorModel();
+	var kleur_view=new ColorView(kleur_model);
+	
+	//We willen weten als het model veranderd, zodat we de view kunnen updaten!
+	kleur_model.addCallback(somethingChangedTheColor);
+	
+	kleur_model.darkenColor(0.75); // we veranderen de kleur
+	
+	// handler voor als het model veranderd.
+	function somethingChangedTheColor(e)
+	{
+		console.log("colorModel reports change of colorModel to html, html update the Colorview.");
+		kleur_view.update(kleur_model)
+	}
+
+	
+</script>
+
+</body>
+
+</html>
+
