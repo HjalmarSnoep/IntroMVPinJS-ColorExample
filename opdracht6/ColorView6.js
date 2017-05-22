@@ -5,6 +5,7 @@ function ColorView(col)
 	// gebruikt cssText om meerdere eigenschappen in een keer te zetten!
 	this.dom.style.cssText = "width: 150px; height: 150px; border: 1px solid black; display: inline-block; margin: 5px;"; 
 
+	// deze functie zet achtergrond, kleur en innerHTML van this.dom.
 	this.update=function(col)
 	{
 		this.dom.style.backgroundColor=col.toString();
@@ -19,6 +20,7 @@ function ColorView(col)
 		}
 	};
 	
+	// style de achtergrond en text en zet innerHTML.
 	this.update(col);
 	
 	// maak het zichtbaar.
