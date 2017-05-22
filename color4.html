@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="ColorModel4.js"></script>
+ <script src="ColorView4.js"></script>
+</head>
+<body>
+	<!-- opdracht:
+	Verander niks aan de HTML, 
+	maar maak ColorModel4.js en ColorView4.js , zo, dat het werkt!
+	
+	Baseer ColorModel4.js op Color3.js
+	Baseer ColorView4.js op color3.html!	
+	-->
+  
+<script type='text/javascript'>
+
+	// Dit is de code voor het PresenterObject, 
+	// we maken dit eerst in HTML.
+	// later verplaatsen we deze code naar zijn eigen object.
+	
+	// zoals je je wellicht herinnert van de Chef: 
+	// een Presenter BEVAT een instantie van het Model EN een instantie van de View.
+	// De presenter was het broodje!
+	
+	var kleur=new ColorModel();
+	var colorView=new ColorView(kleur);
+	
+</script>
+
+</body>
+
+</html>
+
