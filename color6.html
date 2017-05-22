@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="ColorModel6.js"></script>
+ <script src="ColorView6.js"></script>
+</head>
+<body>
+	<!-- opdracht:
+	Verander niks aan de HTML en ColorModel6.js
+	Verander ColorView6.js, gebruik als uitgangspunt de laatste versie (ColorView5.js)
+	
+	Bekijk het voorbeeld met het context probleem bij dom eventListeners.
+	showContextProblem1.html maakt de non-oop situatie duidelijk
+	showContextProblem2.html maakt het probleem duidelijk in OOP!
+	showContextProblem3.html lost het probleem op!
+	
+	Pas deze oplossing toe in ColorView6.js
+	
+	De bedoeling is, iedere keer dat je klikt, maak je de kleur donkerder.
+	- voeg een private property context toe
+	- voeg een public property callback toe
+	- maak een method addCallback in ColorView zo, dat de public property callback wordt gevuld met de parameter die wordt meegegeven.
+	- hang een eventlistener voor "click" aan het dom object!
+	- maak de private function handleColorViewClick()
+	- zorg dat deze de callback functie aanroept!
+	-->
+
+  
+<script type='text/javascript'>
+
+	var kleur_model=new ColorModel();
+	var kleur_view=new ColorView(kleur_model);
+
+	// Als we interactie aan de view willen koppelen, 
+	// moeten we het aan het model vertellen als er iets gebeurd
+	// Dus de presenter moet het weten als er iets gebeurd in de View.
+	// Laten we (eerst) een callback aan de view_instance meegeven..	
+	kleur_view.addCallback(someoneClicksOnTheView);
+	
+	// handler voor klikken op de View.
+	function someoneClicksOnTheView()
+	{
+		console.log("presenter learns the view is clicked and darkens the colorModel!");
+		kleur_model.darkenColor();
+	}	
+	
+	// Als het model veranderd, moet de view ook geupdate worden
+	// dus ook daaraan hangen we een callback.
+	kleur_model.addCallback(somethingChangedTheColor);
+
+	// handler voor als het model veranderd.
+	function somethingChangedTheColor(e)
+	{
+		console.log("presenter changes the view!");
+		kleur_view.setColor(kleur_model)
+	}
+
+	
+</script>
+
+</body>
+
+</html>
+
