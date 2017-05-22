@@ -1,0 +1,25 @@
+<html>
+<body>
+<div id="test">Click Me</div>
+<script>	
+	var data="myData!";
+	var d=document.getElementById("test");
+	d.addEventListener("click",handleClick);
+	
+	function handleClick(ev)
+	{
+		var str="ev.currentTarget: "+ev.currentTarget+"<br>";
+		str+="this: "+this+"<br>";
+		str+="data: "+data+"<br>";
+		d.innerHTML=str;
+	}
+	
+</script>
+<!--
+Output:
+ev.currentTarget: [object HTMLDivElement]
+this: [object HTMLDivElement]
+data: myData!
+-->
+</body>
+</html>

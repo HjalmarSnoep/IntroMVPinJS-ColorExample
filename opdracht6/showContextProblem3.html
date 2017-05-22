@@ -1,0 +1,35 @@
+<html>
+<body>
+<div id="test">Click Me</div>
+<script>
+	function myClass()
+	{
+		var context=this; 
+		// oplossing!
+		// we keep the this in a temporay private variable context!
+		
+		this.data="MyData!";
+		var d=document.getElementById("test");
+		d.addEventListener("click",handleClick);
+		
+		function handleClick(ev)
+		{
+			var str="ev.currentTarget: "+ev.currentTarget+"<br>";
+			str+="this: "+this+"<br>";
+			str+="context: "+context+"<br>";
+			str+="context.data: "+context.data+"<br>";
+			d.innerHTML=str;
+		}
+	}
+	var temp=new myClass();
+</script>
+<!--
+Output:
+ev.currentTarget: [object HTMLDivElement]
+this: [object HTMLDivElement]
+context: [object Object]
+context.data: MyData!
+-->
+</body>
+</html>
+
