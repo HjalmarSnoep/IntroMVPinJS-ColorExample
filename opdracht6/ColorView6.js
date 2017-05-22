@@ -24,9 +24,4 @@ function ColorView(col)
 	// maak het zichtbaar.
 	document.body.appendChild(this.dom);
 	
-	this.addCallback=function(callback)
-	{
-		this.callback=callback; // keep the (1 for now) subscriberCallback
-		console.log("A subscriber was added to the view."+this.subscriber);
-	};
 }
