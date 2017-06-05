@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="ColorPresenter8.js"></script>
+ <script src="ColorModel8.js"></script>
+ <script src="ColorView8.js"></script>
+
+ <script src="ToolboxPresenter8.js"></script>
+ <script src="ToolboxModel8.js"></script>
+ <script src="ToolboxView8.js"></script>
+ 
+</head>
+<body>
+  <!-- opdracht:
+	Verander niks aan de HTML,
+	ColorModel krijg je van me...
+	maak ColorView7.js en ColorPresenter7.js
+	zo, dat de kleuren schuiven in de regenboog (hue change)
+	
+	Het punt wat ik wil maken is, 
+	je kunt de ColorModel.js uitbreiden tot je een ons weegt.
+	Doordat je het Model isoleert is de kans dat je deze code
+	zult hergebruiken.
+    Als je Model View Presenter scheidt, kun je Model vaak integraal hergebruiken.
+	-->
+<script type='text/javascript'>
+	
+	// this is the app.
+	var toolbox=new ToolboxPresenter();
+
+	var i=0;
+	for(i=0;i<50;i++) new ColorPresenter(toolbox);
+	
+</script>
+
+</body>
+
+</html>
+
